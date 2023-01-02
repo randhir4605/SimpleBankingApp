@@ -8,15 +8,17 @@ While server up database view created as table. so delete table <view name> then
 
 
 APIs
-http://localhost:8080/account/getById/8000145
-http://localhost:8080/customer/getCustomerById/3
-http://localhost:8080/accountDetail/getAllAccountDetailsByCustomerId/3
-http://localhost:8080/customer/getAllCustomers
-http://localhost:8080/search/
+http://localhost:8080/api/customer/{userId}/getCustomerById/{customerId}
+userId - raj2020 , customerId=3
+http://localhost:8080/api/customer/{userId}/getAllCustomers
+userId - staff1
+http://localhost:8080/api/account/{userId}/getByAccountNumber/{accountNumber}
+userId -raj2020 , account Number - 8000145
+http://localhost:8080/api/accountDetail/{userId}/getAllAccountDetailsByCustomerId/{customerId}
 
+http://localhost:8080/api/search/
 payload - 
 {
-    
     "firstName": "randhir"
 } 
 
