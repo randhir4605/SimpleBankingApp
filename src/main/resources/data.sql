@@ -22,16 +22,18 @@ insert into account_holder(id, account_number,customer_id) values(1,6000101,1);
  
  insert into Bank_User (USER_ID, USER_NAME, PASSWORD, ENABLED)  
 values (1, 'admin', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1); 
-
 insert into Bank_User (USER_ID, USER_NAME, PASSWORD, ENABLED) 
 values (2, 'staff1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1); 
-
 insert into Bank_User (USER_ID, USER_NAME, PASSWORD, ENABLED) 
-values (3, 'customer1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1);
+values (3, 'raj2020', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1);
+insert into Bank_User (USER_ID, USER_NAME, PASSWORD, ENABLED) 
+values (4, 'mohan25', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1);
+insert into Bank_User (USER_ID, USER_NAME, PASSWORD, ENABLED) 
+values (5, 'udit14', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', 1);
 
-insert into bank_role (ROLE_ID, ROLE_NAME) values (1, 'ADMIN'); 
-insert into bank_role (ROLE_ID, ROLE_NAME) values (2, 'STAFF');
-insert into bank_role (ROLE_ID, ROLE_NAME) values (3, 'CUSTOMER'); 
+insert into bank_role (ROLE_ID, ROLE_NAME) values (1, 'ROLE_ADMIN'); 
+insert into bank_role (ROLE_ID, ROLE_NAME) values (2, 'ROLE_STAFF');
+insert into bank_role (ROLE_ID, ROLE_NAME) values (3, 'ROLE_CUSTOMER'); 
 
 -- Admin has all the access
 insert into user_role (ID, USER_ID, ROLE_ID) values (1, 1, 1); 
