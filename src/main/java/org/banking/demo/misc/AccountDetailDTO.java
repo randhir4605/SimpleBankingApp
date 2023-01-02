@@ -1,4 +1,4 @@
-package org.banking.demo.dto;
+package org.banking.demo.misc;
 
 import org.banking.demo.entity.AccountType;
 import org.banking.demo.entity.Branch;

@@ -35,7 +35,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 			List<String> roleNames=new ArrayList<>(); 
 			List<UserRole> roles=this.userRoleRepository.findByAppUser(appUser);
 			for(UserRole userRole:roles) { 
-				roleNames.add(userRole.getAppUser().getUserName()); 
+				roleNames.add(userRole.getAppRole().getRoleName()); 
 			} 
 
 			List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>(); 
@@ -48,8 +48,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
 				} 
 
 			} 
-		
-			System.out.println("User Found: " + appUser.getUserName());  
+		  
+			System.out.print("User - "+appUser.getUserName()+",  Authorized Role - ");
+			grantList.stream().forEach(e->System.out.print(e.getAuthority()+",  "));
+			System.out.println();
+			
 			UserDetails userDetails = (UserDetails) new User(appUser.getUserName(),appUser.getEncrytedPassword(),grantList);  
 			return userDetails;
 		} 

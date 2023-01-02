@@ -2,8 +2,8 @@ package org.banking.demo.controller;
 
 import java.util.List;
 
-import org.banking.demo.dto.SearchParamDTO;
 import org.banking.demo.entity.AccountDetails;
+import org.banking.demo.misc.SearchParamDTO;
 import org.banking.demo.service.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

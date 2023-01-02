@@ -14,8 +14,7 @@ import org.springframework.stereotype.Component;
 public class AuthenticationEntryPointConfig extends BasicAuthenticationEntryPoint{
 
 	@Override
-	public void commence(HttpServletRequest request, HttpServletResponse response,
-			AuthenticationException authException) throws IOException {
+	public void commence(HttpServletRequest request, HttpServletResponse response,AuthenticationException authException) throws IOException {
 		response.addHeader("WWW-Authenticate", "Basic Realm - " + getRealmName());
 		response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 		PrintWriter writer = response.getWriter();
@@ -24,7 +23,7 @@ public class AuthenticationEntryPointConfig extends BasicAuthenticationEntryPoin
 	
 	@Override
 	public void afterPropertiesSet() {
-		setRealmName("This is Realm Name !");
+		setRealmName("REALM");
 		super.afterPropertiesSet();
 	}
 	

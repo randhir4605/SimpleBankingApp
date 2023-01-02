@@ -9,22 +9,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-
-@Table(name = "User_Role")
+@Table(name = "USER_ROLE")
 
 public class UserRole {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "Id")
+	@Column(name = "ID")
 	private Integer id;
 
 	@ManyToOne
-	@JoinColumn(name = "User_Id")
+	@JoinColumn(name = "USER_ID")
 	private AppUser appUser;
 
 	@ManyToOne
-	@JoinColumn(name = "Role_Id")
+	@JoinColumn(name = "ROLE_ID")
 	private AppRole appRole;
 
 	public Integer getId() {

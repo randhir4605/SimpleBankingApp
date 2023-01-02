@@ -24,7 +24,6 @@ public class SecurityTestController {
 	
 	@GetMapping("/admin")
 	public String admin() {
-		System.out.println("controller - Admin");
 		return "admin";		
 	}
 	
